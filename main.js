@@ -55,6 +55,9 @@ function displayRecipe() {
     var mealDessert = desserts[getRandomIndex(desserts)];
     displayMeal.innerText = `${mealMain} with a side of ${mealSide} and ${mealDessert} for dessert!`;
   } else {
+    potImage.classList.remove('hidden');
+    showRecipe.classList.add('hidden');
+    clearButton.classList.add('hidden');
     alert('Please select an option!');
   }
 }
