@@ -8,6 +8,7 @@ var letsCookButton = document.querySelector('.lets-cook');
 var clearButton = document.querySelector('.clear');
 
 var displayFood = document.querySelector('h1');
+var displayMeal = document.querySelector('.meal');
 var selectSide = document.querySelector('#side');
 var selectMain = document.querySelector('#main')
 var selectDessert = document.querySelector('#dessert');
@@ -28,19 +29,30 @@ function displayRecipe() {
   showRecipe.classList.remove('hidden');
 
   if (selectSide.checked == true) {
+    displayFood.classList.remove('hidden');
+    displayMeal.classList.add('hidden');
     var cookSide = sides[getRandomIndex(sides)];
     displayFood.innerText = `${cookSide}!`;
+
   } else if (selectMain.checked == true) {
+    displayFood.classList.remove('hidden');
+    displayMeal.classList.add('hidden');
     var cookMain = mains[getRandomIndex(mains)];
     displayFood.innerText = `${cookMain}!`;
+
   } else if (selectDessert.checked == true) {
+    displayFood.classList.remove('hidden');
+    displayMeal.classList.add('hidden');
     var cookDessert = desserts[getRandomIndex(desserts)];
     displayFood.innerText = `${cookDessert}`;
+
   } else if (selectMeal.checked == true) {
+    displayFood.classList.add('hidden');
+    displayMeal.classList.remove('hidden');
     var mealSide = sides[getRandomIndex(sides)];
     var mealMain = mains[getRandomIndex(mains)];
     var mealDessert = desserts[getRandomIndex(desserts)];
-    displayFood.innerText = `${mealMain} with a side of ${mealSide} and ${mealDessert} for dessert!`;
+    displayMeal.innerText = `${mealMain} with a side of ${mealSide} and ${mealDessert} for dessert!`;
   }
 }
 
