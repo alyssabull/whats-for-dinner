@@ -19,12 +19,30 @@ body {
   background-color: #0fb9b1;
   font-family: 'Roboto', sans-serif;
   margin: -9px;
+  padding-bottom: 12px;
   text-indent: 20px;
+  height: 50px;
 }
 
 button {
-  margin: 10px;
+  margin-top: 15px;
   margin-right: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
+  border-color: white;
   font-size: 12px;
+  height: 30px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  margin: 45px;
+}
+
+.box {
+  height: 260px;
+  width: 330px;
+  margin: 10px;
+  background-color: white;
+  opacity: 0.9;
 }
