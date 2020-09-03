@@ -54,6 +54,8 @@ function displayRecipe() {
     var mealMain = mains[getRandomIndex(mains)];
     var mealDessert = desserts[getRandomIndex(desserts)];
     displayMeal.innerText = `${mealMain} with a side of ${mealSide} and ${mealDessert} for dessert!`;
+  } else {
+    alert('Please select an option!');
   }
 }
 
