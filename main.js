@@ -6,6 +6,7 @@ var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana 
 
 var letsCookButton = document.querySelector('.lets-cook');
 var clearButton = document.querySelector('.clear');
+var recipeButton = document.querySelector('.add-recipe');
 
 var displayFood = document.querySelector('h1');
 var displayMeal = document.querySelector('.meal');
@@ -13,12 +14,14 @@ var selectSide = document.querySelector('#side');
 var selectMain = document.querySelector('#main')
 var selectDessert = document.querySelector('#dessert');
 var selectMeal = document.querySelector('#entire-meal');
+var footerView = document.querySelector('.footer-bar');
 
 var potImage = document.querySelector('.pot');
 var showRecipe = document.querySelector('.recipe');
 
 letsCookButton.addEventListener('click', displayRecipe);
 clearButton.addEventListener('click', defaultView);
+recipeButton.addEventListener('click', viewFooter)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -66,4 +69,8 @@ function defaultView() {
   potImage.classList.remove('hidden');
   showRecipe.classList.add('hidden');
   clearButton.classList.add('hidden');
+}
+
+function viewFooter() {
+  footerView.classList.remove('hidden');
 }
