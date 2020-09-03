@@ -1,16 +1,7 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/
-
 body {
   background-image: url("./assets/burger-friends.jpg");
   background-size: 100%;
+  margin: 0px;
 }
 
 #wrapper {
@@ -45,7 +36,6 @@ button {
 
 .star {
   color: #ee5253;
-  display: flex;
   font-size: 13px;
 }
 
@@ -54,10 +44,11 @@ button {
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
   height: 260px;
-  width: 330px;
+  width: 340px;
   margin: 10px;
-  background-color: white;
+  background-color: rgba(225, 225, 225, .9);
   opacity: 0.9;
+  position: relative;
 }
 
 h3 {
@@ -67,30 +58,18 @@ h3 {
   margin-top: 40px;
 }
 
-ul {
-  list-style: none;
-}
-
-li {
+.options {
   font-size: 13px;
   margin-bottom: 10px;
 }
 
-li::before {
-  content: "\25E6";
-  color: gray;
-  padding-right: 5px;
+li {
+  list-style-type: none;
+  padding: 5px;
 }
 
-/* li:hover {
-  cursor: pointer;
-} */
-
-/* Once the bullet is click it should be a target */
-/* ◉ Target \25C9 */
-
-ul {
-  margin-bottom: 5px;
+#entire-meal {
+  padding-bottom: 0px;
 }
 
 .lets-cook {
@@ -102,12 +81,44 @@ ul {
   height: 25px;
 }
 
+.clear {
+  height: 25px;
+  width: 50px;
+  margin-bottom: 15px;
+  background-color: #95a5a6;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 .pot {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
   height: 100px;
   width: 100px;
+}
+
+.recipe {
+  margin: auto;
+}
+
+h5 {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
 }
