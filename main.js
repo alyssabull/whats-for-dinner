@@ -27,6 +27,7 @@ function getRandomIndex(array) {
 function displayRecipe() {
   potImage.classList.add('hidden');
   showRecipe.classList.remove('hidden');
+  clearButton.classList.remove('hidden');
 
   if (selectSide.checked == true) {
     displayFood.classList.remove('hidden');
@@ -59,4 +60,5 @@ function displayRecipe() {
 function defaultView() {
   potImage.classList.remove('hidden');
   showRecipe.classList.add('hidden');
+  clearButton.classList.add('hidden');
 }
