@@ -12,3 +12,19 @@ body {
   background-image: url("./assets/burger-friends.jpg");
   background-size: 100%;
 }
+
+#wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0fb9b1;
+  font-family: 'Roboto', sans-serif;
+  margin: -9px;
+  text-indent: 20px;
+}
+
+button {
+  margin: 10px;
+  margin-right: 20px;
+  border-radius: 10px;
+  font-size: 12px;
+}
