@@ -32,7 +32,7 @@ button {
   margin-top: 11px;
   margin-right: 20px;
   border-radius: 5px;
-  border-color: white;
+  border: none;
   font-size: 12px;
   height: 30px;
 }
@@ -43,10 +43,15 @@ button {
   margin: 45px;
 }
 
+.star {
+  color: #ee5253;
+  display: flex;
+  font-size: 13px;
+}
+
 .box {
   display: flex;
   flex-direction: column;
-  align-items: left;
   font-family: 'Roboto', sans-serif;
   height: 260px;
   width: 330px;
@@ -56,6 +61,7 @@ button {
 }
 
 h3 {
+  display: flex;
   margin-left: 30px;
   margin-bottom: 5px;
   margin-top: 40px;
@@ -68,7 +74,6 @@ ul {
 li {
   font-size: 13px;
   margin-bottom: 10px;
-  margin-left: 10px;
 }
 
 li::before {
@@ -94,6 +99,7 @@ ul {
   margin-top: 0px;
   margin-left: 25px;
   font-size: 10px;
+  height: 25px;
 }
 
 .pot {
