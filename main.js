@@ -7,6 +7,7 @@ var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana 
 var letsCookButton = document.querySelector('.lets-cook');
 var clearButton = document.querySelector('.clear');
 var recipeButton = document.querySelector('.add-recipe');
+var addNewButton = document.querySelector('.add-new');
 
 var displayFood = document.querySelector('h1');
 var displayMeal = document.querySelector('.meal');
@@ -19,9 +20,15 @@ var footerView = document.querySelector('.footer-bar');
 var potImage = document.querySelector('.pot');
 var showRecipe = document.querySelector('.recipe');
 
+var inputRecipeType = document.querySelector('.recipe-type');
+var inputRecipeName = document.querySelector('.recipe-name');
+var inputField1 = document.querySelector('#input-field1');
+var inputField2 = document.querySelector('#input-field2');
+
 letsCookButton.addEventListener('click', displayRecipe);
 clearButton.addEventListener('click', defaultView);
-recipeButton.addEventListener('click', viewFooter)
+recipeButton.addEventListener('click', viewFooter);
+addNewButton.addEventListener('click', addRecipe);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -73,4 +80,33 @@ function defaultView() {
 
 function viewFooter() {
   footerView.classList.remove('hidden');
+}
+
+function addRecipe() {
+    addSide();
+    addMain();
+    addDessert();
+  inputField1.value = "";
+  inputField2.value = "";
+}
+
+function addSide() {
+  if (inputRecipeType.value == 'side') {
+      sides.push(inputRecipeName.value);
+      alert('Your side dish has been added!');
+    }
+}
+
+function addMain() {
+  if (inputRecipeType.value == 'main') {
+    mains.push(inputRecipeName.value);
+    alert('Your main dish has been added!')
+  }
+}
+
+function addDessert() {
+  if (inputRecipeType.value == 'dessert') {
+    desserts.push(inputRecipeName.value);
+    alert('Your dessert has been added!');
+  }
 }
